@@ -1,5 +1,8 @@
-const PORT = process.env.PORT || 8900;
-const io = require("socket.io")(PORT, {
+// const PORT = process.env.PORT || 8900;
+const express = require("express");
+const app = express();
+const http = require("http").createServer(app);
+const io = require("socket.io")(http, {
   cors: {
     origin: "*",
     // origin: "http://192.168.76.2:8081",
@@ -100,4 +103,10 @@ io.on("connection", (socket) => {
     removeUser(socket.id);
     socket.disconnect();
   });
+});
+
+// Start the server
+const PORT = process.env.PORT || 8900;
+http.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
