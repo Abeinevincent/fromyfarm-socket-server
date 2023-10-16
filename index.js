@@ -51,8 +51,9 @@ let onlineUsers = [];
  *           type: string
  *     responses:
  *       200:
- *         description: User added successfully.
+ *         description: User added successfully
  */
+
 const addUser = (userId, socketId) => {
   //userId will be buyerId or farmerId
   !onlineUsers?.some((user) => user.userId === userId) &&
