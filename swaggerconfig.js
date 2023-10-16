@@ -9,9 +9,9 @@ const options = {
   definition: {
     openapi: "3.0.0",
     info: {
-      title: "Scholar Track Socket Server Documentation",
+      title: "Fromy Farm Socket Server Documentation",
       version: "1.0.0",
-      description: `Socket server implementation for a mobile app for masters research students.`,
+      description: `Socket server implementation for a mobile app for connecting farmers and buyers across the globe with real time communication`,
     },
     servers: [
       {
